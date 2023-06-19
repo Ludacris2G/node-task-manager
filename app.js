@@ -6,15 +6,10 @@ require('dotenv').config();
 
 // middleware
 
+app.use(express.static('./public'));
 app.use(express.json());
 
 // routes
-app.get('/hello', (req, res) => {
-    res.status(200).send('It works bludkowski');
-})
-
-
-
 app.use('/api/v1/tasks', tasks);
 
 
